@@ -105,5 +105,5 @@ dist
 .DS_Store
 
 #database
-database/databases/
+#database/databases/ß
 database/tmp/
