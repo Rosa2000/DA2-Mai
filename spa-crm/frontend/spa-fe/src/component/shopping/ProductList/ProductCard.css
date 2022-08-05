@@ -6,15 +6,30 @@
 .card img {
   max-width: 200px;
   max-height: 200px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-title {
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.product-card {
-  width: 18rem;
+/* .product-card {
+  max-height: ;
+} */
+
+.product-card:hover {
+  box-shadow: 10px;
+}
+
+.card-body {
+  color: black;
+}
+
+h5{
+  color: red;
+  text-align: right;
 }

@@ -19,7 +19,7 @@ const ProductList = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [totalProduct, setToTalProduct] = useState();
 
-  const productsPerPage = 8;
+  const productsPerPage = 12;
 
   if (!offset) {
     offset = 0;

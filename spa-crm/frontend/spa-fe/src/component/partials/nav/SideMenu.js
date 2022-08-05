@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../../images/spalogo.png";
+
 // import CartIcon from "./CartIcon";
 import MenuItem from "./MenuItem";
 

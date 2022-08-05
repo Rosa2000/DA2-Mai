@@ -516,11 +516,13 @@ table {
     font-size: 0.813rem;
   }
 }
+
 .btn-primary {
   color: #fff;
   background-color: #dd2f6e !important;
   border-color: #dd2f6e !important;
 }
+
 .btn {
   display: inline-block;
   font-weight: 400;

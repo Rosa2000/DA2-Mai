@@ -16,11 +16,14 @@ const Login = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(login(phone, password)).then(() => {
-      props.history.push("/dashboard");
+      props.history.push("/shopping");
     });
   };
+  // const changeAuthMode = () => {
+  //   setAuthMode(authMode === "login" ? "signup" : "login")
+  // }
   if (isLoggedIn) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/shopping" />;
   }
 
   return (
@@ -73,6 +76,9 @@ const Login = (props) => {
                             className="btn btn-primary btn-block"
                           />
                         </div>
+                        {/* <div class="text-center">
+                            <p>Not a member? <a href="">Register</a></p>
+                        </div> */}
                       </form>
                     </div>
                   </div>
