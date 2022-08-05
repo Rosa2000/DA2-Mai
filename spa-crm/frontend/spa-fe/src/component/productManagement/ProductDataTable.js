@@ -19,32 +19,53 @@ const ProductDataTable = () => {
       name: "SKU",
       selector: (row) => row.SKU,
       sortable: true,
-      maxWidth: "100px",
+      maxWidth: "50px",
     },
+
     {
-      name: "Tên",
+      name: "Tên sản phẩm",
       selector: (row) => row.productName,
       sortable: true,
       wrap: true,
     },
+
+    {
+      name: "Thương hiệu",
+      selector: (row) => row.brand,
+      sortable: true,
+      wrap: true,
+      maxWidth: "150px",
+    },
+
+    {
+      name: "Phân loại",
+      selector: (row) => row.category,
+      sortable: true,
+      wrap: true,
+      maxWidth: "150px",
+    },
+
     {
       name: "Số lượng kho",
       selector: (row) => row.inStockValue,
       sortable: true,
       maxWidth: "150px",
     },
+
     {
       name: "Giá nhập",
-      selector: (row) => row.entryPrice,
+      selector: (row) => row.entryPrice.toLocaleString(),
       sortable: true,
       maxWidth: "100px",
     },
+
     {
       name: "Giá bán",
-      selector: (row) => row.salePrice,
+      selector: (row) => row.salePrice.toLocaleString(),
       sortable: true,
       maxWidth: "100px",
     },
+
     {
       name: "Cập nhật",
       cell: (row) => (
@@ -64,6 +85,7 @@ const ProductDataTable = () => {
       button: true,
       maxWidth: "100px",
     },
+
     {
       name: "Xoá",
       cell: (row) => (
@@ -125,15 +147,15 @@ const ProductDataTable = () => {
   return (
     <>
       <ConfirmModal
-        title="Xoá tài khoản"
-        body="Bạn có chắc chắn muốn xoà sản phẩm này?"
-        btnAction="OK, xoá đi..."
-        btnCancel="Thôi, không xoá nữa :D"
-        show={showModal}
-        handleNoClicked={handleCloseModal}
-        handleYesClicked={handleDeleteConfirmedClick}
+        title = "Xoá sản phẩm"
+        body = "Bạn có chắc chắn muốn xóa sản phẩm này?"
+        btnAction = "Chắc chắn"
+        btnCancel = "Quay lại"
+        show = {showModal}
+        handleNoClicked = {handleCloseModal}
+        handleYesClicked = {handleDeleteConfirmedClick}
       />
-      <DataTable columns={columns} data={productData} pagination />
+      <DataTable columns = {columns} data = {productData} pagination />
     </>
   );
 };

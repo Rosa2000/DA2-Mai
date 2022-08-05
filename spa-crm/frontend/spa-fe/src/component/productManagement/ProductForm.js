@@ -202,7 +202,6 @@ const ProductForm = () => {
         <div className="form-group col-md-4">
           <label>Số lượng kho</label>
           <input
-            min="1"
             onChange={handleFormChange}
             required
             name="inStockValue"
@@ -226,6 +225,7 @@ const ProductForm = () => {
           <label>Loại sản phẩm</label>
           <select
             onChange={handleFormChange}
+            required
             defaultValue="choose"
             name="category"
             className="form-control"
@@ -233,8 +233,8 @@ const ProductForm = () => {
             <option value="choose" disabled>
               Chọn...
             </option>
-            <option value="da mặt">Da mặt</option>
-            <option value="sữa tắm">Sữa tắm</option>
+            <option value="Chăm sóc da mặt">Chăm sóc da mặt</option>
+            <option value="Chăm sóc cơ thể">Chăm sóc cơ thể</option>
           </select>
         </div>
       </div>

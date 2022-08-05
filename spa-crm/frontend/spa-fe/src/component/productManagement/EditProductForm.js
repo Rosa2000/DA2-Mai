@@ -263,8 +263,8 @@ const EditProductForm = () => {
             <option value="choose" disabled>
               Chọn...
             </option>
-            <option value="da mặt">Da mặt</option>
-            <option value="sữa tắm">Sữa tắm</option>
+            <option value="Chăm sóc da mặt">Chăm sóc da mặt</option>
+            <option value="Chăm sóc cơ thể">Chăm sóc cơ thể</option>
           </select>
         </div>
       </div>

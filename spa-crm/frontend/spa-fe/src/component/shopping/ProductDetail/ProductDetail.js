@@ -16,6 +16,7 @@ const ProductDetail = (props) => {
     SKU: "",
     salePrice: 0,
     brand: "",
+    category:"",
     description: "",
     user_manual: "",
   });
@@ -102,6 +103,8 @@ const ProductDetail = (props) => {
     setRedirectToShopping(true);
   };
 
+  let amount = quantity * productInfo.salePrice;
+
   if (redirectToShopping) {
     return <Redirect to="/shopping" />;
   }
@@ -112,7 +115,7 @@ const ProductDetail = (props) => {
         title="Mua sản phẩm"
         body={bodyModal}
         btnAction="Mua ngay"
-        btnCancel="Cancel"
+        btnCancel="Quay lại"
         show={showModal}
         handleCloseModal={CancelModal}
         handleNoClicked={CancelModal}
@@ -122,7 +125,7 @@ const ProductDetail = (props) => {
         <div className="card">
           <div className="card-body">
             <div className="row">
-              <div className="col-xl-3 col-lg-6  col-md-6 col-xxl-5 ">
+              <div className=" img-review col-xl-3 col-lg-6  col-md-6 col-xxl-5 ">
                 {/* Tab panes */}
                 <Tab.Container defaultActiveKey="0">
                   <Tab.Content>{tabPanel}</Tab.Content>
@@ -153,17 +156,24 @@ const ProductDetail = (props) => {
                     </div>
 
                     <p>
-                      <strong>Mã sản phẩm:</strong>{" "}
-                      <span className="item">{productInfo.SKU}</span>{" "}
+                      <strong>Mã sản phẩm: </strong>
+                      <span className="item">{productInfo.SKU}</span>
                     </p>
                     <p>
-                      <strong>Thương hiệu</strong>{" "}
+                      <strong>Thương hiệu: </strong>
                       <span className="item">{productInfo.brand}</span>
                     </p>
-                    <p className="text-content">{productInfo.description}</p>
-
+                    <p>
+                      <strong>Loại sản phẩm: </strong>
+                      <span className="text-content">{productInfo.category}</span>
+                    </p>
+                    <p>
+                      <strong>Mô tả sản phẩm: </strong>
+                      <span className="text-content">{productInfo.description}</span>
+                    </p>
                     {/*Quantity start*/}
                     <div className="col-2 px-0">
+                      <strong>Số lượng:</strong>
                       <input
                         type="number"
                         name="num"
@@ -171,7 +181,14 @@ const ProductDetail = (props) => {
                         defaultValue={1}
                         onChange={changequantity}
                       />
+                      <br></br>
                     </div>
+
+                    <p>
+                      <strong>Thành tiền: </strong>
+                      <span className="text-content">{amount.toLocaleString()}</span>
+                    </p>
+
                     {/*Quanatity End*/}
                     <div className="mt-3">
                       <Button

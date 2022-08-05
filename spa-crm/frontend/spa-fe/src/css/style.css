@@ -523,10 +523,16 @@ table {
   border-color: #dd2f6e !important;
 }
 
+.btn-primary:hover {
+  color: #fff;
+  background-color: #f45b93 !important;
+  border-color: #f45b93 !important;
+}
+
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #7e7e7e;
+  color: #ffffff;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;

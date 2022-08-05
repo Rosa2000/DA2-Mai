@@ -11,7 +11,7 @@ const ProductCard = (props) => {
         </div>
         <div className="card-body">
           <h3 className="card-title">{props.productName}</h3>
-          <h5 className="card-title">{props.salePrice} VND</h5>
+          <h5 className="card-title">{props.salePrice.toLocaleString()} VND</h5>
         </div>
       </div>
     </>
