@@ -95,10 +95,9 @@ const Signup = () => {
                           <div className="text-danger fs-12">{errorMsg}</div>
                         )}
                         <div className="text-center mt-4">
-                          <input
-                            type="submit"
-                            className="btn btn-primary btn-block"
-                          />
+                          <button type="submit" className="btn btn-primary btn-block">
+                            Sign Up
+                          </button>
                         </div>
                       </form>
                       <div className="new-account mt-3 ">

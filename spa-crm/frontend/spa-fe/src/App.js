@@ -16,6 +16,8 @@ import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 import { history } from "./helpers/history";
 import axios from "axios";
+import UserList from "./component/userManagement/UserList";
+import Signup from "./component/Signup";
 
 const baseURL = process.env.REACT_APP_URL_USERS_API;
 
@@ -61,13 +63,21 @@ function App() {
     routes = (
       <Switch>
         <Route path="/login" component={Login} />
+        {/* <Route exact path="/users" component={UserList}>
+
+        </Route> */}
         <Route path="/">
           <Dashboard logOut={logOut} role={role} />
         </Route>
       </Switch>
     );
   } else {
-    routes = <Route path="/" component={Login} />;
+    routes = (
+      <Switch>
+        <Route path="/signup" component={Signup} />
+        <Route path="/login" component={Login} />
+      </Switch>
+    );
   }
 
   return (

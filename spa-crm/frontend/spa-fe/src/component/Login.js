@@ -71,15 +71,27 @@ const Login = (props) => {
                           <div className="text-danger fs-12">{message}</div>
                         )}
                         <div className="text-center mt-4">
-                          <input
+                          {/* <input
+                            label="Login"
                             type="submit"
                             className="btn btn-primary btn-block"
-                          />
+                          /> */}
+                          <button type="submit" className="btn btn-primary btn-block">
+                            Login
+                          </button>
                         </div>
                         {/* <div class="text-center">
                             <p>Not a member? <a href="">Register</a></p>
                         </div> */}
                       </form>
+                      <div className="new-account mt-3 ">
+                        <p>
+                          Chưa có tài khoản?{" "}
+                          <a className="text-primary" href="/signup">
+                            Đăng Ký
+                          </a>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
