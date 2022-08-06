@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Redirect, useLocation } from "react-router-dom";
 
+import "./ProductForm.css";
+
 import UploadProductImg from "./UploadProductImg";
 import axios from "axios";
 import authHeader from "../../services/auth-header";

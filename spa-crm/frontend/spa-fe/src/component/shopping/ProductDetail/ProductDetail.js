@@ -171,6 +171,10 @@ const ProductDetail = (props) => {
                       <strong>Mô tả sản phẩm: </strong>
                       <span className="text-content">{productInfo.description}</span>
                     </p>
+                    <p>
+                      <strong>Hướng dẫn sử dụng: </strong>
+                      <span className="text-content">{productInfo.user_manual}</span>
+                    </p>
                     {/*Quantity start*/}
                     <div className="col-2 px-0">
                       <strong>Số lượng:</strong>

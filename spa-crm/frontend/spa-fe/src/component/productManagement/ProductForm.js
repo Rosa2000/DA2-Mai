@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UploadProductImg from "./UploadProductImg";
 import axios from "axios";
+import "./ProductForm.css";
 import authHeader from "../../services/auth-header";
 import ConfirmModal from "../confirmModal";
 import { Redirect } from "react-router-dom";
