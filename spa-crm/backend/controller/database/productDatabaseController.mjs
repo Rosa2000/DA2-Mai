@@ -49,7 +49,7 @@ export async function findProductInfo(SKU) {
   const db = await connectDB();
   const product = await new Promise((resolve, reject) => {
     db.get(
-      "SELECT productName, SKU,salePrice, brand, description, user_manual, URL_IMG FROM products WHERE SKU = ?",
+      "SELECT productName, SKU, salePrice, brand, category, description, user_manual, URL_IMG FROM products WHERE SKU = ?",
       [SKU],
       (err, row) => {
         if (err) reject(err);

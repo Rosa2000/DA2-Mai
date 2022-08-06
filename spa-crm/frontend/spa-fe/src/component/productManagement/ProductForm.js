@@ -235,6 +235,7 @@ const ProductForm = () => {
             </option>
             <option value="Chăm sóc da mặt">Chăm sóc da mặt</option>
             <option value="Chăm sóc cơ thể">Chăm sóc cơ thể</option>
+            <option value="Chăm sóc tóc">Chăm sóc tóc</option>
           </select>
         </div>
       </div>
