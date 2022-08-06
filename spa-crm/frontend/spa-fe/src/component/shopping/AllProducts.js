@@ -19,7 +19,10 @@ const AllProduct = () => {
       </Route>
     </Switch>
   );
-  return <>{routes}</>;
+  return <>
+    <h1>Tất cả sản phẩm</h1>
+    {routes}
+  </>;
 };
 
 export default AllProduct;

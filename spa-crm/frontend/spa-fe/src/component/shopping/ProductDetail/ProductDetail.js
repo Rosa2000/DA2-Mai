@@ -165,7 +165,7 @@ const ProductDetail = (props) => {
                     </p>
                     <p>
                       <strong>Loại sản phẩm: </strong>
-                      <span className="text-content">{productInfo.category}</span>
+                      <span className="item">{productInfo.category}</span>
                     </p>
                     <p>
                       <strong>Mô tả sản phẩm: </strong>
@@ -177,6 +177,7 @@ const ProductDetail = (props) => {
                       <input
                         type="number"
                         name="num"
+                        min = "1"
                         className="form-control input-btn input-number"
                         defaultValue={1}
                         onChange={changequantity}
@@ -186,7 +187,7 @@ const ProductDetail = (props) => {
 
                     <p>
                       <strong>Thành tiền: </strong>
-                      <span className="text-content">{amount.toLocaleString()}</span>
+                      <span className="text-content">{amount.toLocaleString()} VND</span>
                     </p>
 
                     {/*Quanatity End*/}
