@@ -214,4 +214,11 @@ export const customerMenuItems = [
       },
     ],
   },
+  {
+    name: "Đặt lịch",
+    exact: true,
+    to: `/booking`,
+    iconClassName: "bi bi-calendar-check",
+    component: <BookingForm />,
+  },
 ];
