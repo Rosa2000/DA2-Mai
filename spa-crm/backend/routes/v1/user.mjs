@@ -77,7 +77,7 @@ router.post("/create", authJwt.authToken, async (req, res) => {
             msg: "signup success",
           });
         } else {
-          return res.status(401).json({
+          return res.status(400).json({
             msg: "invalid input",
           });
         }
@@ -85,7 +85,7 @@ router.post("/create", authJwt.authToken, async (req, res) => {
         res.status(401).json({ msg: "password not match" });
       }
     } else {
-      return res.status(401).json({
+      return res.status(400).json({
         msg: "invalid input",
       });
     }

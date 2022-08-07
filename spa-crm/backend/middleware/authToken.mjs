@@ -3,7 +3,7 @@ import { findUser } from "../controller/database/userController.mjs";
 let tokenRole;
 let tokenPhone;
 let authToken = (req, res, next) => {
-  const token = req.headers["x-access-token"];
+  const token = req.headers["x-access-token"] || req.headers["Authorization"];;
   if (!token) {
     res.status(401).json({
       errors: [{ msg: "Token not found" }],

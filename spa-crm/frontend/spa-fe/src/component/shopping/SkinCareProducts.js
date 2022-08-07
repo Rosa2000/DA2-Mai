@@ -7,7 +7,7 @@ const SkinCareProducts = () => {
   // const { search } = useLocation();
   // const searchParams = new URLSearchParams(search);
 // const SKU = searchParams.get("SKU");
-  <h1>Chăm sóc da mặt</h1>
+  // <h1>Chăm sóc da mặt</h1>
   let routes = (
     <Switch>
       <Route exact={true} path="/shopping/skin-care">

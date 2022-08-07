@@ -77,9 +77,9 @@ const Login = (props) => {
                             className="btn btn-
                             primary btn-block"
                           /> */}
-                          <div class="text-center">
+                          {/* <div class="text-center">
                             <p> <a href="/changepassword">Forgot password</a></p>
-                        </div>
+                        </div> */}
 
                           <button type="submit" className="btn btn-primary btn-block">
                             Login

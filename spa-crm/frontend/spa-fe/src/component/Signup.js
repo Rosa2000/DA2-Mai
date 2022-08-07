@@ -31,7 +31,7 @@ const Signup = () => {
         // return <Redirect path="/signin" />;
       })
       .catch((error) => {
-        setErrorMsg(error.response.data.msg);
+        // setErrorMsg(error.response.data.msg);
         console.log(error.response.data.msg);
       });
   };
